@@ -1,0 +1,34 @@
+ <?php 
+            $query = "SELECT * FROM publicacoes order by id desc";
+             if ($result = $conn->query($query)) {
+                 while ($row = $result->fetch_assoc()) {
+        ?> 
+        <div class="username">
+            <?php echo $nome = $row["username"].'<br>'; ?>
+        </div>
+        <div class="pub">
+            <?php echo $pub = $row["pub"].'<br>';?>
+        </div>
+        <div class="likes"> 
+             <?php  
+                }
+            $result->free();
+            }
+        ?> 
+         </div>
+
+<?php echo $likes = $row["likes"].'<br>';?> 
+</div> 
+
+
+// $query = "SELECT * FROM publicacoes where username={$_SESSION['user_name']} order by id desc";
+    // if ($result = $conn->query($query)) {
+    //     while ($row = $result->fetch_assoc()) {
+    //         echo $row["username"].'<br>';
+    //         echo $pub = $row["pub"].'<br>';
+            
+    
+    
+    //     }
+    //     $result->free();
+    // }
